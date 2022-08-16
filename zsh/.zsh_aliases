@@ -1,0 +1,18 @@
+alias hosts="sudo nvim /etc/hosts"
+alias reload="source ~/.zshrc"
+alias dstart="docker compose up -d"
+alias dstop="docker compose kill"
+alias nah="git reset --hard && git clean -df"
+alias gcf="git commit --amend --reuse-message HEAD"
+alias gcm="git checkout main"
+alias gstall="git stash --include-untracked"
+alias v="nvim"
+alias vim="nvim"
+alias k="kubectl"
+alias ts="tree-sitter"
+
+# ZSH Stuff
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim  ~/.oh-my-zsh"
+alias myip="curl http://ipecho.net/plain; echo"
+

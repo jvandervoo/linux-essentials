@@ -1,0 +1,40 @@
+alias ovpnssh="ssh ubuntu@hdy-proxy.heyday.net.nz -i ~/.ssh/id_rsa_heyday_server"
+alias awslogin="aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 944632824485.dkr.ecr.ap-southeast-2.amazonaws.com"
+alias evince-test-aks='az account set --subscription "BI" && az aks browse --resource-group Evince-Test --name evince-aks-test'
+alias dev4="ssh ubuntu@hdy-www-dev4.heyday.net.nz"
+alias dev3="ssh dev@dev3.heyday.net.nz"
+alias dssh='docker exec -it $(docker ps | grep www | cut -d" " -f1) bash'
+alias essh='docker exec -it evince-www bash'
+alias pssh='docker exec -it evince-pxi-www bash'
+
+# MacOS aliases
+alias cb="clipboard"
+alias setkeyrepeat='sudo defaults write -g KeyRepeat -int 1 && sudo defaults write -g InitialKeyRepeat -int 11'
+
+# k8s autocomplete
+if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+# Refresh the Evince database in the pod
+evr () {
+    docker exec evince-www bash -c \
+        "php artisan migrate:fresh --seed ; php artisan passport:install ; php artisan evince:seed-test-data";
+}
+
+# Print the .beamlog file for a beam target.
+# Target defaults to live if not given
+#
+#    usage: whatsup [target]
+#
+function whatsup() {
+    local server="${1-live}";
+    >&2 echo "Getting beamlog for $server..";
+    beam down $server -p .beamlog -q --no-prompt && \
+        (cat .beamlog && \
+        rm .beamlog) \
+        || echo "Failed: either '$server' is not a valid target or you're not in a project directory"
+    }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

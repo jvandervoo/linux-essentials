@@ -1,0 +1,32 @@
+# Kill process on specified port
+function killport() { 
+    lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9 
+}
+
+# Base64 encode
+b64e () {
+    echo -n "$1" | base64
+}
+
+# Base64 decode
+b64d () {
+    echo -n "$1" | base64 --decode
+}
+
+# tat - tmux attach (nicely)
+function tat {
+    # get the current directory and remove any periods
+    name=$(basename `pwd` | sed -e 's/\.//g')
+
+    # if any session with the same name is open, re-attach
+    if tmux ls 2>&1 | grep "$name"; then
+        tmux attach -t "$name"
+    # otherwise check for .envrc and start tmux with direnv exec
+    elif [ -f .envrc ]; then
+        direnv exec / tmux new-session -s "$name"
+    else
+    # otherwise start new session with the name of the cd
+        tmux new-session -s "$name"
+    fi
+}
+
