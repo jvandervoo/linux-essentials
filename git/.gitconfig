@@ -1,0 +1,50 @@
+[credential]
+	helper = osxkeychain
+
+[color]
+	ui = auto
+
+[user]
+	name = Jasper
+	email = jasper.vandervoo@akqa.com
+
+[core]
+	excludesfile = ~/jvandervoo/.gitignore_global
+
+[commit]
+	template = ~/jvandervoo/.stCommitMsg
+
+[pull]
+	rebase = true
+
+[worktree]
+	guessRemote = true
+
+[alias]
+	root = rev-parse --show-toplevel
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive --max-line-length=150
+
+[delta]
+    features = decorations
+    # syntax-theme = Monokai (SL)
+    syntax-theme = gruvbox-dark
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
