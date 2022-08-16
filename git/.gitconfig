@@ -1,12 +1,9 @@
-[credential]
-	helper = osxkeychain
-
 [color]
 	ui = auto
 
 [user]
 	name = Jasper
-	email = jasper.vandervoo@akqa.com
+	email = jasper.voo@gmail.com
 
 [core]
 	excludesfile = ~/jvandervoo/.gitignore_global
