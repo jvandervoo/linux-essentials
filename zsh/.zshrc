@@ -3,11 +3,12 @@ PATH="./node_modules/.bin:$PATH"
 PATH="$HOME/go/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.fnm:$PATH"
 # PATH="$HOME/.krew/bin:$PATH"
 NVIM_INIT="$HOME/.config/nvim/init.lua"
 
-#Remove user@computer
-USER=``
+# Remove user@computer
+export DEFAULT_USER="$(whoami)"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -33,3 +34,6 @@ source "$HOME/.config/zsh/.zsh_functions"
 
 # Work stuff
 source "$HOME/.config/zsh/.zsh_work"
+
+# fnm
+eval "$(fnm env --use-on-cd)"
