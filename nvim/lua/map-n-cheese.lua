@@ -52,9 +52,7 @@ map('n', 'tc', ':tabc<Cr>', { noremap = true, silent = true})
 map('n', 'tn', ':tabn<Cr>', { noremap = true, silent = true})
 map('n', 'tp', ':tabp<Cr>', { noremap = true, silent = true})
 
-
 -- Debugging
-
 map('n', '<F1>', ":lua require'dap'.repl.toggle({width = 60}, 'vsplit')<Cr>", { noremap = true, silent = true})
 map('n', '<F2>', ":lua require'dap'.list_breakpoints(true)<Cr>", { noremap = true, silent = true})
 map('n', '<F3>', ":lua require'dap.breakpoints'.clear()<Cr>", { noremap = true, silent = true})
@@ -67,7 +65,7 @@ map('n', '<F12>', ":lua require'dap'.step_out()<Cr>", { noremap = true, silent =
 
 -- Php cs fixer
 -- This needs to shift to the :Format command - set up config to do this
-map('n', '<Leader>pf', ':call PhpCsFixerFixFile()<Cr>', { noremap = true, silent = true})
+map('n', '<Leader>qs', ':wa<Cr> :mksession! ~/vimsessions/sesh.vim<Cr> :qa!<Cr>', { noremap = true, silent = true})
 
 -- LSP code formatting
 map('n', '<Leader>lf', ':Format<Cr>', { noremap = true, silent = true})
