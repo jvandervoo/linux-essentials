@@ -63,7 +63,7 @@ require 'packer'.startup(
         use { 'mhartington/formatter.nvim' }
 
         -- debugging
-        use { 'mfussenegger/nvim-dap' }
+        use { 'mfussenegger/nvim-dap', requires = 'rcarriga/nvim-dap-ui'}
 
         -- tmux window navigation
         use { 'christoomey/vim-tmux-navigator' }
@@ -72,7 +72,8 @@ require 'packer'.startup(
 
         -- requires
         require 'plugin-config.nvim-tree'
-        require 'plugin-config.nvim-dap-php'
+        require 'plugin-config.nvim-dap'
+        require 'plugin-config.nvim-dap-ui'
         require 'plugin-config.nvim-formatter'
         require 'plugin-config.nvim-php-cs-fixer'
         require 'plugin-config.nvim-gitsigns'
