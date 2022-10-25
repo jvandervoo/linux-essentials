@@ -53,7 +53,7 @@ map('n', 'tn', ':tabn<Cr>', { noremap = true, silent = true})
 map('n', 'tp', ':tabp<Cr>', { noremap = true, silent = true})
 
 -- Debugging
-map('n', '<F1>', ":lua require'dap'.repl.toggle({width = 60}, 'vsplit')<Cr>", { noremap = true, silent = true})
+map('n', '<F1>', ":lua require'dapui'.toggle()<Cr>", { noremap = true, silent = true})
 map('n', '<F2>', ":lua require'dap'.list_breakpoints(true)<Cr>", { noremap = true, silent = true})
 map('n', '<F3>', ":lua require'dap.breakpoints'.clear()<Cr>", { noremap = true, silent = true})
 map('n', '<F4>', ":lua require'dap'.disconnect()<Cr>:lua require'dap'.close()<Cr>", { noremap = true, silent = true})
