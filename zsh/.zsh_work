@@ -4,8 +4,9 @@ alias evince-test-aks='az account set --subscription "BI" && az aks browse --res
 alias dev4="ssh ubuntu@hdy-www-dev4.heyday.net.nz"
 alias dev3="ssh dev@dev3.heyday.net.nz"
 alias dssh='docker exec -it $(docker ps | grep www | cut -d" " -f1) bash'
-alias essh='docker exec -it evince-www bash'
-alias pssh='docker exec -it evince-pxi-www bash'
+alias plssh='docker exec -it evince-pl-www bash'
+alias ifassh='docker exec -it evince-ifa-www bash'
+alias testingssh='docker exec -it evince-testing-www bash'
 
 # MacOS aliases
 alias cb="clipboard"
@@ -14,9 +15,14 @@ alias setkeyrepeat='sudo defaults write -g KeyRepeat -int 1 && sudo defaults wri
 # k8s autocomplete
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
-# Refresh the Evince database in the pod
-evr () {
-    docker exec evince-www bash -c \
+# Refresh the IFA Evince database in the pod
+ifamigrate () {
+    docker exec evince-ifa-www bash -c \
+        "php artisan migrate:fresh --seed ; php artisan passport:install ; php artisan evince:seed-test-data";
+}
+# Refresh the PL Evince database in the pod
+plmigrate () {
+    docker exec evince-pl-www bash -c \
         "php artisan migrate:fresh --seed ; php artisan passport:install ; php artisan evince:seed-test-data";
 }
 
