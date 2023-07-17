@@ -2,6 +2,8 @@ local dap = require('dap')
 dap.adapters.php = {
     type = 'executable',
     command = 'node',
+    -- you need to clone vscode php debug repo in your home directory
+    -- in order for the adapter to be available
     args = { os.getenv('HOME') .. '/vscode-php-debug/out/phpDebug.js' }
 }
 
