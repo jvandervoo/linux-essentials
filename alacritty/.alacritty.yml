@@ -394,7 +394,7 @@ colors:
 font:
     normal:
       family: "BlexMono Nerd Font"
-      style: Book
+      style: Light
     bold:
       family: "BlexMono Nerd Font"
       style: Medium
@@ -405,7 +405,7 @@ font:
       family: "BlexMono Nerd Font"
       style: Medium Italic
     # Point size
-    size: 16.0
+    size: 18.0
     offset:
       x: 1
-      y: 4
+      y: 0
