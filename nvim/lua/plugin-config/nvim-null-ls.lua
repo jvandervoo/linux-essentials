@@ -4,7 +4,9 @@ null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.pint,
-        null_ls.builtins.formatting.prettierd.with({
+        null_ls.builtins.formatting.blade_formatter,
+        null_ls.builtins.formatting.eslint.with({
+            diagnostics = true,
             filetypes = {
                 "javascript",
                 "javascriptreact",
@@ -22,7 +24,11 @@ null_ls.setup({
                 "graphql",
                 "handlebars",
             },
-        })
+            extra_args = {
+                "-c",
+                ".eslintrc.js",
+            },
+        }),
     },
     -- format on save
     -- you can reuse a shared lspconfig on_attach callback here
