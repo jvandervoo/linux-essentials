@@ -1,7 +1,7 @@
 -- actually requiring plugins
 require("packer").startup({
     function()
-        -- packer install packer hahaha
+        -- packer install
         use("wbthomason/packer.nvim")
 
         use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })
@@ -12,7 +12,6 @@ require("packer").startup({
             branch = "master",
             run = { ":TSUpdate" },
             requires = {
-                -- 'nvim-treesitter/playground',
                 "nvim-treesitter/tree-sitter-lua",
                 "tree-sitter/tree-sitter-javascript",
                 "tree-sitter/tree-sitter-php",
@@ -45,16 +44,13 @@ require("packer").startup({
             },
         })
 
-        -- add a bunch of snippets for vsnip
-        use({ "stevearc/vim-vsnip-snippets" })
-
         -- fuzzy finder
         use({
             "nvim-telescope/telescope.nvim",
             requires = {
                 "nvim-lua/plenary.nvim",
-                "nvim-telescope/telescope-live-grep-args.nvim"
-            }
+                "nvim-telescope/telescope-live-grep-args.nvim",
+            },
         })
 
         -- bracket pairs
@@ -84,16 +80,15 @@ require("packer").startup({
         require("plugin-config.nvim-dap")
         require("plugin-config.nvim-dap-ui")
         require("plugin-config.nvim-null-ls")
-        require("plugin-config.nvim-gitsigns")
         require("plugin-config.nvim-Comment")
-        require("plugin-config.nvim-ts-autotag")         -- config for nvim-autopairs with nvim-cmp
+        require("plugin-config.nvim-ts-autotag")
         require("plugin-config.nvim-autopairs-nvim-cmp") -- config for nvim-autopairs with nvim-cmp
         require("plugin-config.nvim-telescope")
-        require("plugin-config.nvim-cmp")
         require("plugin-config.nvim-mason")
         require("plugin-config.nvim-lspconfig")
-        require("plugin-config.nvim-treesitter-playground")
         require("plugin-config.nvim-treesitter")
+        require("plugin-config.nvim-gitsigns")
+        require("plugin-config.nvim-cmp")
     end,
     config = {
         git = {
