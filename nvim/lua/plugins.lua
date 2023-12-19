@@ -67,7 +67,7 @@ require("packer").startup({
         use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" })
 
         -- code formatter
-        use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+        use({ "nvimtools/none-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 
         -- debugging
         use({ "mfussenegger/nvim-dap", requires = "rcarriga/nvim-dap-ui" })
@@ -79,7 +79,7 @@ require("packer").startup({
         require("plugin-config.nvim-tree")
         require("plugin-config.nvim-dap")
         require("plugin-config.nvim-dap-ui")
-        require("plugin-config.nvim-null-ls")
+        require("plugin-config.nvim-none-ls")
         require("plugin-config.nvim-Comment")
         require("plugin-config.nvim-ts-autotag")
         require("plugin-config.nvim-autopairs-nvim-cmp") -- config for nvim-autopairs with nvim-cmp

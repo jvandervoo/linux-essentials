@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?.lua;/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?/init.lua;/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?.lua;/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/jasper.vandervoo/.cache/nvim/packer_hererocks/2.1.1700008891/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/formatter.nvim",
-    url = "https://github.com/mhartington/formatter.nvim"
-  },
   ["git-blame.nvim"] = {
     loaded = true,
     path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
@@ -124,15 +119,25 @@ _G.packer_plugins = {
     path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
-  ["lsp_signature.nvim"] = {
-    loaded = true,
-    path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
-    url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
   ["lush.nvim"] = {
     loaded = true,
     path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["none-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -153,11 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["telescope-live-grep-args.nvim"] = {
+    loaded = true,
+    path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
+    url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -228,11 +233,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  ["vim-vsnip-snippets"] = {
-    loaded = true,
-    path = "/Users/jasper.vandervoo/.local/share/nvim/site/pack/packer/start/vim-vsnip-snippets",
-    url = "https://github.com/stevearc/vim-vsnip-snippets"
   }
 }
 
