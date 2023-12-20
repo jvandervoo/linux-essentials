@@ -21,7 +21,7 @@ map("n", "<Leader>cp", ':let @+ = expand("%")<Cr>', { noremap = true, silent = t
 
 -- LSP
 map("n", "gD", ":lua vim.lsp.buf.declaration()<Cr>", { noremap = true, silent = true })
-map("n", "gd", ":lua vim.lsp.buf.definition()<Cr>", { noremap = true, silent = true })
+map("n", "gd", ":Telescope lsp_definitions<Cr>", { noremap = true, silent = true })
 map("n", "K", ":lua vim.lsp.buf.hover()<Cr>", { noremap = true, silent = true })
 map("n", "<Leader>.", ":lua vim.lsp.buf.code_action()<Cr>", { noremap = true, silent = true })
 map("n", "<Leader>dd", ":lua vim.diagnostic.open_float()<Cr>", { noremap = true, silent = true })
@@ -70,11 +70,6 @@ map("n", "<Leader>fR", ":Telescope resume<Cr>", { noremap = true, silent = true 
 map("n", "<Leader>ee", ":NvimTreeToggle<Cr>:set nu<Cr>:set rnu<Cr>", { noremap = true, silent = true })
 map("n", "<Leader>ef", ":NvimTreeFindFile<Cr>:set nu<Cr>:set rnu<Cr>", { noremap = true, silent = true })
 
--- Buffer navigation
--- This messes with navigating the jumplist via <C-i> because <C-i> is equivalent to tab
--- map('n', '<Tab>', ':bnext<Cr>', { noremap = true, silent = true})
--- map('n', '<S-Tab>', ':bprev<Cr>', { noremap = true, silent = true})
-
 -- Tab navigation
 map("n", "tt", ":tab split<Cr>", { noremap = true, silent = true })
 map("n", "tc", ":tabc<Cr>", { noremap = true, silent = true })
@@ -94,9 +89,6 @@ map("n", "<F12>", ":lua require'dap'.step_out()<Cr>", { noremap = true, silent =
 
 -- Sessions
 map("n", "<Leader>qs", ":wa<cr> :mksession! ~/vimsessions/sesh.vim<cr> :qa!<cr>", { noremap = true, silent = true })
-
--- LSP code formatting
-map("n", "<Leader>lf", ":Format<Cr>", { noremap = true, silent = true })
 
 -- Quickfix list
 map("n", "<Leader>n", ":cn<Cr>", { noremap = true, silent = true })
