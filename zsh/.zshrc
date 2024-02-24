@@ -37,3 +37,5 @@ source "$HOME/.config/zsh/.zsh_work"
 
 # fnm
 eval "$(fnm env --use-on-cd)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
