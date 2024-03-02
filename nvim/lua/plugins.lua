@@ -21,6 +21,7 @@ require("packer").startup({
 
         -- colorschemes
         use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
+use { "catppuccin/nvim", as = "catppuccin" }
 
         -- lsp support
         use({
