@@ -37,7 +37,8 @@ require('telescope').setup {
             "--line-number",
             "--column",
             "--smart-case",
-            "--hidden"
+            "--hidden",
+            "--fixed-strings"
         }
 
     },
@@ -68,7 +69,6 @@ require('telescope').setup {
                 i = {
                     ["<C-k>"] = lga_actions.quote_prompt(),
                     ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
-                    ["<C-p>"] = lga_actions.quote_prompt({ postfix = "-t php" }),
                     ["<C-j>"] = lga_actions.quote_prompt({ postfix = "-t js" }),
                 },
             },
