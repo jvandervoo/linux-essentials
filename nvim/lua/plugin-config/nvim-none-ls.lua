@@ -3,36 +3,8 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.pint.with({
-            filetype = {
-                "php",
-            },
-        }),
-        null_ls.builtins.formatting.blade_formatter,
-        null_ls.builtins.formatting.eslint.with({
-            diagnostics = true,
-            filetypes = {
-                "javascript",
-                "javascriptreact",
-                "typescript",
-                "typescriptreact",
-                "vue",
-                "css",
-                "scss",
-                "less",
-                "html",
-                "json",
-                "jsonc",
-                "markdown",
-                "markdown.mdx",
-                "graphql",
-                "handlebars",
-            },
-            extra_args = {
-                "-c",
-                ".eslintrc.js",
-            },
-        }),
+        null_ls.builtins.formatting.pint,
+        null_ls.builtins.formatting.prettierd,
     },
     -- format on save
     -- you can reuse a shared lspconfig on_attach callback here
