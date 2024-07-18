@@ -1,5 +1,7 @@
 -- Mmmmmm.... cheese
 local map = vim.api.nvim_set_keymap
+local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
+
 -- Leader
 map("", "<Space>", "\\", { noremap = false, silent = true })
 
@@ -47,6 +49,11 @@ map(
     "<leader>fg",
     ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>',
     { noremap = true, silent = true }
+)
+vim.keymap.set(
+    "v",
+    "<leader>fv",
+    live_grep_args_shortcuts.grep_visual_selection
 )
 map(
     "n",
