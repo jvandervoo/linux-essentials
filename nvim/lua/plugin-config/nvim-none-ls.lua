@@ -18,7 +18,11 @@ null_ls.setup({
                 callback = function()
                     -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
                     -- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
-                    vim.lsp.buf.format({ async = false })
+                    vim.lsp.buf.format({
+                        async = false,
+                        -- do not use intelephense for formatting as we use pint instead
+                        filter = function(client) return client.name ~= "intelephense" end
+                    })
                 end,
             })
         end
