@@ -5,6 +5,7 @@ null_ls.setup({
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.pint,
         null_ls.builtins.formatting.prettierd,
+        null_ls.builtins.formatting.terraform_fmt,
     },
     -- format on save
     -- you can reuse a shared lspconfig on_attach callback here
