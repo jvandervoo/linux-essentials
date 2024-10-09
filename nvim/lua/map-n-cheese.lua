@@ -29,7 +29,6 @@ map("n", "<Leader>.", ":lua vim.lsp.buf.code_action()<Cr>", { noremap = true, si
 map("n", "<Leader>dd", ":lua vim.diagnostic.open_float()<Cr>", { noremap = true, silent = true })
 map("n", "<Leader>dl", ":lua vim.diagnostic.goto_next()<Cr>", { noremap = true, silent = true })
 map("n", "<Leader>dh", ":lua vim.diagnostic.goto_prev()<Cr>", { noremap = true, silent = true })
-map("n", "gr", ":lua vim.lsp.buf.references()<Cr>", { noremap = true, silent = true })
 
 -- Telescope
 map(
