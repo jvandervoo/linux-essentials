@@ -1,6 +1,6 @@
 -- actually requiring plugins
 require("packer").startup({
-    function()
+    function(use)
         -- packer install
         use("wbthomason/packer.nvim")
 
@@ -69,7 +69,7 @@ require("packer").startup({
         -- code formatter
         use({ "nvimtools/none-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 
-        -- debugging
+        -- debugging tools
         use({ 
             "mfussenegger/nvim-dap",
             requires = {
