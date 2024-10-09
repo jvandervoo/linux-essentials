@@ -70,12 +70,12 @@ require("packer").startup({
         use({ "nvimtools/none-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 
         -- debugging tools
-        use({ 
+        use({
             "mfussenegger/nvim-dap",
             requires = {
                 "rcarriga/nvim-dap-ui",
                 "nvim-neotest/nvim-nio"
-            } 
+            }
         })
 
         -- tmux window navigation
