@@ -81,6 +81,9 @@ require("packer").startup({
 		-- tmux window navigation
 		use({ "christoomey/vim-tmux-navigator" })
 
+		-- session management
+		use({ "rmagatti/auto-session" })
+
 		-- requires
 		require("plugin-config.nvim-tree")
 		require("plugin-config.nvim-dap")
@@ -95,6 +98,7 @@ require("packer").startup({
 		require("plugin-config.nvim-treesitter")
 		require("plugin-config.nvim-gitsigns")
 		require("plugin-config.nvim-cmp")
+		require("plugin-config.nvim-auto-session")
 	end,
 	config = {
 		git = {

@@ -32,41 +32,38 @@ map("n", "<Leader>dh", ":lua vim.diagnostic.goto_prev()<Cr>", { noremap = true, 
 
 -- Telescope
 map(
-    "n",
-    "<Leader>ff",
-    ':lua require("telescope.builtin").find_files({hidden=true})<Cr>',
-    { noremap = true, silent = true }
+	"n",
+	"<Leader>ff",
+	':lua require("telescope.builtin").find_files({hidden=true})<Cr>',
+	{ noremap = true, silent = true }
 )
 map(
-    "n",
-    "<Leader>fF",
-    ':lua require("telescope.builtin").find_files({hidden=true, no_ignore=true})<Cr>',
-    { noremap = true, silent = true }
+	"n",
+	"<Leader>fF",
+	':lua require("telescope.builtin").find_files({hidden=true, no_ignore=true})<Cr>',
+	{ noremap = true, silent = true }
 )
 map(
-    "n",
-    "<leader>fg",
-    ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>',
-    { noremap = true, silent = true }
+	"n",
+	"<leader>fg",
+	':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>',
+	{ noremap = true, silent = true }
 )
-vim.keymap.set(
-    "v",
-    "<leader>fv",
-    live_grep_args_shortcuts.grep_visual_selection
-)
+vim.keymap.set("v", "<leader>fv", live_grep_args_shortcuts.grep_visual_selection)
 map(
-    "n",
-    "<Leader>fG",
-    ':lua require("telescope.builtin").live_grep({hidden=true, no_ignore=false})<Cr>',
-    { noremap = true, silent = true }
+	"n",
+	"<Leader>fG",
+	':lua require("telescope.builtin").live_grep({hidden=true, no_ignore=false})<Cr>',
+	{ noremap = true, silent = true }
 )
 map("n", "<Leader>fb", ":Telescope buffers<Cr>", { noremap = true, silent = true })
+
 -- show class properties and methods
 map(
-    "n",
-    "<Leader>fs",
-    ':lua require("telescope.builtin").lsp_document_symbols({symbols = {"property", "method"}})<Cr>',
-    { noremap = true, silent = true }
+	"n",
+	"<Leader>fs",
+	':lua require("telescope.builtin").lsp_document_symbols({symbols = {"property", "method"}})<Cr>',
+	{ noremap = true, silent = true }
 )
 -- show references
 map("n", "<Leader>fr", ':lua require("telescope.builtin").lsp_references()<Cr>', { noremap = true, silent = true })
@@ -94,7 +91,7 @@ map("n", "<F11>", ":lua require'dap'.step_into()<Cr>", { noremap = true, silent 
 map("n", "<F12>", ":lua require'dap'.step_out()<Cr>", { noremap = true, silent = true })
 
 -- Sessions
-map("n", "<Leader>qs", ":wa<cr> :mksession! ~/vimsessions/sesh.vim<cr> :qa!<cr>", { noremap = true, silent = true })
+map("n", "<Leader>ts", ":Telescope session-lens<Cr>", { noremap = true, silent = true })
 
 -- Quickfix list
 map("n", "<Leader>n", ":cn<Cr>", { noremap = true, silent = true })
