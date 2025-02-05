@@ -23,31 +23,24 @@ background = "0x282828"
 foreground = "0xebdbb2"
 
 [font]
-size = 18.0
+size = 22.0
 
 [font.bold]
-family = "BlexMono Nerd Font"
-style = "Medium"
+family = "Iosevka Term"
+style = "Regular"
 
 [font.bold_italic]
-family = "BlexMono Nerd Font"
-style = "Medium Italic"
+family = "Iosevka Term"
+style = "Regular Italic"
 
 [font.italic]
-family = "BlexMono Nerd Font"
-style = "Text Italic"
+family = "Iosevka Term"
+style = "Extralight Italic"
 
 [font.normal]
-family = "BlexMono Nerd Font"
-style = "Light"
-
-[font.offset]
-x = 1
-y = 0
+family = "Iosevka Term"
+style = "Extralight"
 
 [window.padding]
 x = 0
 y = 0
-
-[window.padding.launcher]
-program = "open"
