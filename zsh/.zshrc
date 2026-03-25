@@ -37,3 +37,6 @@ source "$HOME/.config/zsh/.zsh_work"
 
 # fnm
 eval "$(fnm env --use-on-cd)"
+
+# Added by Antigravity
+export PATH="/Users/jasper/.antigravity/antigravity/bin:$PATH"
