@@ -27,20 +27,16 @@ size = 22.0
 
 [font.bold]
 family = "Iosevka Term"
-style = "Regular"
+style = "Regular Extended"
 
 [font.bold_italic]
 family = "Iosevka Term"
-style = "Regular Italic"
+style = "Regular Italic Extended"
 
 [font.italic]
 family = "Iosevka Term"
-style = "Extralight Italic"
+style = "Extralight Italic Extended"
 
 [font.normal]
 family = "Iosevka Term"
-style = "Extralight"
-
-[window.padding]
-x = 0
-y = 0
+style = "Extralight Extended"
