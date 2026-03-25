@@ -1,13 +1,22 @@
--- Installs packer on the first load. Not super nice but helpful for cloning dots to another machine
-if require 'packer-install'() then
+-- Attempt to install packer if not present
+local should_bootstrap = require('packer-install')()
+if should_bootstrap then
+	-- Exit early after bootstrap to allow proper plugin setup on next launch
 	return
 end
 
 -- general config
-require 'map-n-cheese'
-require 'statusline'
-require 'utils'
-require 'options'
-require 'plugins'
-require 'colors'
-require 'autocmds'
+local function safe_require(module)
+    local ok, _ = pcall(require, module)
+    if not ok then
+        vim.notify('Error loading ' .. module, vim.log.levels.ERROR)
+    end
+end
+
+safe_require 'map-n-cheese'
+safe_require 'statusline'
+safe_require 'utils'
+safe_require 'options'
+safe_require 'plugins'
+safe_require 'colors'
+safe_require 'autocmds'
